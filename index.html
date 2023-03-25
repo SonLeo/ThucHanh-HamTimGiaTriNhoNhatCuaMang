@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Value of array</title>
+</head>
+<body>
+    <script>
+        let arr1 = [3, 5, 1, 8, -3, 7, 8];
+        let arr2 = [7, 12, 6, 9, 20, 56, 89];
+        let arr3 = [];
+        let arr4 = [0, 0, 0, 0, 0, 0];
+
+        function minArray(arr) {
+            if (arr.length == 0) {
+                return -1;
+            }
+
+            let min = arr[0];
+            let index = 0;
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                    index = i;
+                }
+            }
+            return index;
+        }
+
+        let minArray1 = minArray(arr1);
+        let minArray2 = minArray(arr2);
+        let minArray3 = minArray(arr3);
+        let minArray4 = minArray(arr4);
+
+        if (minArray1 == -1) {
+            document.write("Array 1 is empty!");
+        } else {
+            document.write("Min of array 1 is: " + arr1[minArray1]);
+        }
+
+        if (minArray2 == -1) {
+            document.write("<br>Array 2 is empty!");
+        } else {
+            document.write("<br>Min of array 2 is: " + arr2[minArray2]);
+        }
+
+        if (minArray3 == -1) {
+            document.write("<br>Array 3 is empty!");
+        } else {
+            document.write("<br>Min of array 3 is: " + arr3[minArray3]);
+        }
+
+        if (minArray4 == -1) {
+            document.write("<br>Array 4 is empty!");
+        } else {
+            document.write("<br>Min of array 4 is: " + arr4[minArray4]);
+        }
+    </script>
+</body>
+</html>
